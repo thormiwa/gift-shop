@@ -28,7 +28,7 @@ app.get('/',function(req,res){
 })
 
 //Billing Address
-app.post("/billing-address", async (req, res) => {
+app.post("/shipping-address", async (req, res) => {
     // billing logic
     try{
         const { first_name, last_name, phone_number, apt, street_address, city, zip_code, state } = req.body;
