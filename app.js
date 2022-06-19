@@ -4,12 +4,10 @@ const express = require("express");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const bodyParser = require('body-parser');
-const cors = require('cors')
 
 
 
 const app = express();
-app.use(cors());
 app.use(express.json());
 app.use('/public', express.static(__dirname + '/public'));
 app.use( bodyParser.json() );
