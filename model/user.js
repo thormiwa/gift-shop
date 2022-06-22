@@ -19,4 +19,4 @@ shippingSchema.set('toJSON', {
     }
 });
 
-module.exports = mongoose.model("user", shippingSchema);
+module.exports = mongoose.model("shipping", shippingSchema);
