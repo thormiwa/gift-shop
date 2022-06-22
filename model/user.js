@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const userSchema = new mongoose.Schema({
+const shippingSchema = new mongoose.Schema({
     first_name: { type:String, default:null },
     last_name: { type:String, default:null },
     street_address: { type:String },
@@ -11,7 +11,7 @@ const userSchema = new mongoose.Schema({
     zip_code: { type:String }
 })
 
-userSchema.set('toJSON', {
+shippingSchema.set('toJSON', {
     versionKey: false,
     transform: function (doc, ret) {
         // remove these props when object is serialized
@@ -19,4 +19,4 @@ userSchema.set('toJSON', {
     }
 });
 
-module.exports = mongoose.model("user", userSchema);
+module.exports = mongoose.model("user", shippingSchema);

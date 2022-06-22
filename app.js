@@ -18,7 +18,7 @@ app.use(bodyParser.urlencoded({ // to support URL-encoded bodies
 
 //Logic
 // importing user context
-const User = require("./model/user");
+const Shipping = require("./model/user");
 const Credit = require("./model/credit");
 const { SocketAddress } = require("net");
 
@@ -39,7 +39,7 @@ app.post("/shipping-address", async (req, res) => {
     }
 
     //create User in our database
-    const user = await User.create({
+    const shipping = await Shipping.create({
         first_name,
         last_name,
         street_address,
@@ -51,7 +51,7 @@ app.post("/shipping-address", async (req, res) => {
     });
 
     // return new user
-    res.status(201).json(user);
+    res.status(201).json(shipping);
   } catch (err) {
     console.log(err);
   }
